@@ -53,13 +53,14 @@ def decode(frame):
     return decoded_objs
         
 def draw_positions(frame, decoded_objs):
+    font = cv2.FONT_HERSHEY_PLAIN
     for decoded_obj in decoded_objs:
         left, top, width, height = decoded_obj.rect
         frame = cv2.rectangle(frame,
                               (left, top),
                               (left + width, height + top),
                               (255, 255, 0), 2)
-        cv2.putText('http://localhost')
-
+        cv2.putText(frame, 'http://localhost', (0, 0), font, 0.6, (255,255,0))
+#cv2.putText(im,text,(w-length-from_edge-5,h-from_edge-hight),font, font_size,(255,255,0))
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False, threaded=True)
