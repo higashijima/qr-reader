@@ -59,7 +59,7 @@ def draw_positions(frame, decoded_objs):
                               (left, top),
                               (left + width, height + top),
                               (255, 255, 0), 2)
-
+        cv2.putText('http://localhost')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False, threaded=True)
