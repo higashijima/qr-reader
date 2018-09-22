@@ -60,7 +60,7 @@ def draw_positions(frame, decoded_objs):
                               (left, top),
                               (left + width, height + top),
                               (255, 255, 0), 2)
-        data = decoded_data.data
+        data = decoded_obj.data
         cv2.putText(frame, 'fixed text', (0, 10), font, 4, (255,255,0), 2, cv2.LINE_AA)
 #font = cv2.FONT_HERSHEY_SIMPLEX
 #cv2.putText(img,'OpenCV',(10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
