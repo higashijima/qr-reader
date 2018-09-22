@@ -49,7 +49,6 @@ def decode(frame):
         print(datetime.now().strftime('%H:%M:%S.%f'))
         print('Type: ', decoded_obj.type)
         print('Data: ', decoded_obj.data)
-        cv2.putText(decoded_obj.type)
     
     return decoded_objs
         
