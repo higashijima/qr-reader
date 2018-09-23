@@ -49,7 +49,7 @@ def decode(frame):
         print(datetime.now().strftime('%H:%M:%S.%f'))
         print('Type: ', decoded_obj.type)
         print('Data: ', decoded_obj.data)
-        cv2.putText(frame, data, (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
+        cv2.putText(frame, decoded_obj.data, (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
     return decoded_objs
         
 def draw_positions(frame, decoded_objs):
