@@ -55,14 +55,18 @@ def draw_positions(frame, decoded_objs):
     font = cv2.FONT_HERSHEY_PLAIN
     for decoded_obj in decoded_objs:
         left, top, width, height = decoded_obj.rect
+        qr_string = decoded_obj.data.decode()
         frame = cv2.rectangle(frame,
                               (left, top),
                               (left + width, height + top),
                               (255, 255, 0), 2)
-        cv2.putText(frame, decoded_obj.data.decode(), (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
-        
-#font = cv2.FONT_HERSHEY_SIMPLEX
-#cv2.putText(img,'OpenCV',(10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
+#        cv2.putText(frame, qr_string, (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
+        if judge(qr_string[0]　== "scalabatsuri"):
+            cv2.putText(frame, "OK please enter.", (0, 40), font, 2, (255,255,255), 2, cv2.LINE_AA)
+        else:
+            cv2.putText(frame, "Not ", (0, 40), font, 2, (255,255,255), 2, cv2.LINE_AA)
 
+def judge(string):
+    str_array = string.split(":")
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False, threaded=True)
