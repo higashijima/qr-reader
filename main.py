@@ -68,7 +68,7 @@ def draw_positions(frame, decoded_objs):
 
 def judge(string):
     str_array = string.split(":")
-    if str_array[0] == "scalabatsuri":
+    if str_array[0] == "scalamatsuri":
         return True
     else:
         return False
