@@ -61,12 +61,16 @@ def draw_positions(frame, decoded_objs):
                               (left + width, height + top),
                               (255, 255, 0), 2)
 #        cv2.putText(frame, qr_string, (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
-        if judge(qr_string[0] == "scalabatsuri"):
+        if judge(judge()):
             cv2.putText(frame, "OK please enter.", (0, 20), font, 2, (255,255,255), 2, cv2.LINE_AA)
         else:
             cv2.putText(frame, "Not ", (0, 20), font, 2, (255,255,255), 2, cv2.LINE_AA)
 
 def judge(string):
     str_array = string.split(":")
+    if judge(qr_string[0] == "scalabatsuri"):
+        return true
+    else:
+        return fasle
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False, threaded=True)
