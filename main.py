@@ -61,7 +61,7 @@ def draw_positions(frame, decoded_objs):
                               (left + width, height + top),
                               (255, 255, 0), 2)
 #        cv2.putText(frame, qr_string, (0, 40), font, 2, (255,255,0), 2, cv2.LINE_AA)
-        if judge(qr_string[0]　== "scalabatsuri"):
+        if judge(qr_string[0] == "scalabatsuri"):
             cv2.putText(frame, "OK please enter.", (0, 40), font, 2, (255,255,255), 2, cv2.LINE_AA)
         else:
             cv2.putText(frame, "Not ", (0, 40), font, 2, (255,255,255), 2, cv2.LINE_AA)
