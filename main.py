@@ -71,6 +71,6 @@ def judge(string):
     if str_array[0] == "scalabatsuri":
         return true
     else:
-        return fasle
+        return false
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=False, threaded=True)
