@@ -18,6 +18,10 @@ time.sleep(0.1)
 
 app = Flask(__name__)
 
+@app.route('/hello')
+def hello():
+    return Response("hello")
+
 
 @app.route('/stream')
 def stream():
